@@ -24,6 +24,12 @@
 		33104325208A1EC6009A3A2D /* SingleTypeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104324208A1EC6009A3A2D /* SingleTypeDataSource.swift */; };
 		33104327208A1EFB009A3A2D /* UITableView+Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104326208A1EFB009A3A2D /* UITableView+Generics.swift */; };
 		33104329208A22FD009A3A2D /* UITableViewCell+DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104328208A22FD009A3A2D /* UITableViewCell+DefaultValues.swift */; };
+		3310432B208A235E009A3A2D /* CompoundDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3310432A208A235E009A3A2D /* CompoundDataSourceTests.swift */; };
+		3310432F208A23EA009A3A2D /* IntCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3310432E208A23EA009A3A2D /* IntCell.swift */; };
+		33104331208A23F9009A3A2D /* StringDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104330208A23F9009A3A2D /* StringDataSource.swift */; };
+		33104333208A2400009A3A2D /* IntDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104332208A2400009A3A2D /* IntDataSource.swift */; };
+		33104335208A244C009A3A2D /* StringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104334208A244C009A3A2D /* StringCell.swift */; };
+		33104337208A245B009A3A2D /* StringCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33104336208A245B009A3A2D /* StringCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +100,12 @@
 		33104324208A1EC6009A3A2D /* SingleTypeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleTypeDataSource.swift; sourceTree = "<group>"; };
 		33104326208A1EFB009A3A2D /* UITableView+Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Generics.swift"; sourceTree = "<group>"; };
 		33104328208A22FD009A3A2D /* UITableViewCell+DefaultValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+DefaultValues.swift"; sourceTree = "<group>"; };
+		3310432A208A235E009A3A2D /* CompoundDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundDataSourceTests.swift; sourceTree = "<group>"; };
+		3310432E208A23EA009A3A2D /* IntCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntCell.swift; sourceTree = "<group>"; };
+		33104330208A23F9009A3A2D /* StringDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringDataSource.swift; sourceTree = "<group>"; };
+		33104332208A2400009A3A2D /* IntDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntDataSource.swift; path = SweetDataSourceDemo/DataSources/IntDataSource.swift; sourceTree = SOURCE_ROOT; };
+		33104334208A244C009A3A2D /* StringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCell.swift; sourceTree = "<group>"; };
+		33104336208A245B009A3A2D /* StringCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StringCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +205,7 @@
 		33104305208A1C5F009A3A2D /* SweetDataSourceTests */ = {
 			isa = PBXGroup;
 			children = (
+				3310432A208A235E009A3A2D /* CompoundDataSourceTests.swift */,
 				33104306208A1C5F009A3A2D /* SweetDataSourceTests.swift */,
 				33104308208A1C5F009A3A2D /* Info.plist */,
 			);
@@ -203,6 +216,9 @@
 			isa = PBXGroup;
 			children = (
 				33104318208A1CF1009A3A2D /* DemoItemCell.swift */,
+				3310432E208A23EA009A3A2D /* IntCell.swift */,
+				33104334208A244C009A3A2D /* StringCell.swift */,
+				33104336208A245B009A3A2D /* StringCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -210,6 +226,8 @@
 		33104316208A1CD2009A3A2D /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				33104332208A2400009A3A2D /* IntDataSource.swift */,
+				33104330208A23F9009A3A2D /* StringDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -381,6 +399,7 @@
 			files = (
 				331042CF208A1C42009A3A2D /* LaunchScreen.storyboard in Resources */,
 				331042CC208A1C42009A3A2D /* Assets.xcassets in Resources */,
+				33104337208A245B009A3A2D /* StringCell.xib in Resources */,
 				331042CA208A1C40009A3A2D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,9 +432,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33104331208A23F9009A3A2D /* StringDataSource.swift in Sources */,
 				331042C7208A1C40009A3A2D /* ViewController.swift in Sources */,
+				33104333208A2400009A3A2D /* IntDataSource.swift in Sources */,
 				331042C5208A1C40009A3A2D /* AppDelegate.swift in Sources */,
 				33104319208A1CF1009A3A2D /* DemoItemCell.swift in Sources */,
+				33104335208A244C009A3A2D /* StringCell.swift in Sources */,
+				3310432F208A23EA009A3A2D /* IntCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33104307208A1C5F009A3A2D /* SweetDataSourceTests.swift in Sources */,
+				3310432B208A235E009A3A2D /* CompoundDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,6 +767,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SweetDataSourceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -762,6 +787,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SweetDataSourceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

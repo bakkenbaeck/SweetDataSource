@@ -14,7 +14,7 @@ public extension UITableView {
         register(type, forCellReuseIdentifier: type.defaultReuseIdentifier)
     }
 
-    public func registerNib<CellType: UITableViewCell>(forCellType type: CellType.Type, using bundle: Bundle = Bundle.main) {
+    public func registerNib<CellType: UITableViewCell>(forCellType type: CellType.Type, using bundle: Bundle = Bundle(for: CellType.self)) {
         let nib = type.defaultNib(inBundle: bundle)
         register(nib, forCellReuseIdentifier: type.defaultReuseIdentifier)
     }

@@ -120,7 +120,7 @@ open class SingleTypeDataSource<CellType: UITableViewCell, ItemType: Equatable>:
     }
 
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueCell(of: CellType.self, for: indexPath)
+        let cell = tableView.dequeueCell(of: CellType.self)
         let itemForRow = item(at: indexPath)
         configureCell(cell: cell, for: itemForRow)
         return cell

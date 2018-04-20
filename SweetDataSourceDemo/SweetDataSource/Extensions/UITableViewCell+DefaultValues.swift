@@ -19,7 +19,12 @@ public extension UITableViewCell {
     /// - Parameters:
     ///    - bundle: The bundle to grab the nib from.
     public static func defaultNib(inBundle bundle: Bundle = Bundle.main) -> UINib {
-        let nibName = String(describing: type(of: self))
-        return UINib(nibName: nibName, bundle: bundle)
+        let nibName = String(describing: self)
+        let components = nibName.components(separatedBy: ".")
+        guard let className = components.last else {
+            fatalError("Could not get class name from components")
+        }
+
+        return UINib(nibName: className, bundle: bundle)
     }
 }
