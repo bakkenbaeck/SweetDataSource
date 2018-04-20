@@ -10,7 +10,7 @@ jobs:
             - checkout
             - run:
                 name: Run iOS Tests
-                command: set -o pipefail && xcodebuild clean build test -project SweetDataSourceDemo.xcodeproj -scheme "SweetDataSourceDemo" -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty --color && exit ${PIPESTATUS[0]}
+                command: set -o pipefail && xcodebuild clean build test -project SweetDataSourceDemo/SweetDataSourceDemo.xcodeproj -scheme "SweetDataSourceDemo" -destination 'platform=iOS Simulator,name=iPhone 7' | xcpretty --color && exit ${PIPESTATUS[0]}
             #TODO: re-enable once we have a tvOS target
             #- run:
                 #name: Run tvOS Tests
