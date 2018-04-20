@@ -23,6 +23,7 @@
 		33104323208A1E7C009A3A2D /* CompoundableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104321208A1E7C009A3A2D /* CompoundableDataSource.swift */; };
 		33104325208A1EC6009A3A2D /* SingleTypeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104324208A1EC6009A3A2D /* SingleTypeDataSource.swift */; };
 		33104327208A1EFB009A3A2D /* UITableView+Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104326208A1EFB009A3A2D /* UITableView+Generics.swift */; };
+		33104329208A22FD009A3A2D /* UITableViewCell+DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104328208A22FD009A3A2D /* UITableViewCell+DefaultValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		33104321208A1E7C009A3A2D /* CompoundableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundableDataSource.swift; sourceTree = "<group>"; };
 		33104324208A1EC6009A3A2D /* SingleTypeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleTypeDataSource.swift; sourceTree = "<group>"; };
 		33104326208A1EFB009A3A2D /* UITableView+Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Generics.swift"; sourceTree = "<group>"; };
+		33104328208A22FD009A3A2D /* UITableViewCell+DefaultValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+DefaultValues.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				33104326208A1EFB009A3A2D /* UITableView+Generics.swift */,
+				33104328208A22FD009A3A2D /* UITableViewCell+DefaultValues.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				33104327208A1EFB009A3A2D /* UITableView+Generics.swift in Sources */,
 				33104323208A1E7C009A3A2D /* CompoundableDataSource.swift in Sources */,
 				33104325208A1EC6009A3A2D /* SingleTypeDataSource.swift in Sources */,
+				33104329208A22FD009A3A2D /* UITableViewCell+DefaultValues.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
