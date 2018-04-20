@@ -19,6 +19,10 @@
 		3310430C208A1C5F009A3A2D /* SweetDataSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 331042F7208A1C5F009A3A2D /* SweetDataSource.framework */; };
 		3310430D208A1C5F009A3A2D /* SweetDataSource.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 331042F7208A1C5F009A3A2D /* SweetDataSource.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		33104319208A1CF1009A3A2D /* DemoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104318208A1CF1009A3A2D /* DemoItemCell.swift */; };
+		33104322208A1E7C009A3A2D /* CompoundDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104320208A1E7C009A3A2D /* CompoundDataSource.swift */; };
+		33104323208A1E7C009A3A2D /* CompoundableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104321208A1E7C009A3A2D /* CompoundableDataSource.swift */; };
+		33104325208A1EC6009A3A2D /* SingleTypeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104324208A1EC6009A3A2D /* SingleTypeDataSource.swift */; };
+		33104327208A1EFB009A3A2D /* UITableView+Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33104326208A1EFB009A3A2D /* UITableView+Generics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		33104306208A1C5F009A3A2D /* SweetDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetDataSourceTests.swift; sourceTree = "<group>"; };
 		33104308208A1C5F009A3A2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33104318208A1CF1009A3A2D /* DemoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoItemCell.swift; sourceTree = "<group>"; };
+		33104320208A1E7C009A3A2D /* CompoundDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundDataSource.swift; sourceTree = "<group>"; };
+		33104321208A1E7C009A3A2D /* CompoundableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundableDataSource.swift; sourceTree = "<group>"; };
+		33104324208A1EC6009A3A2D /* SingleTypeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleTypeDataSource.swift; sourceTree = "<group>"; };
+		33104326208A1EFB009A3A2D /* UITableView+Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Generics.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,9 +190,12 @@
 		331042F8208A1C5F009A3A2D /* SweetDataSource */ = {
 			isa = PBXGroup;
 			children = (
-				3310431A208A1D18009A3A2D /* Extensions */,
 				331042F9208A1C5F009A3A2D /* SweetDataSource.h */,
 				331042FA208A1C5F009A3A2D /* Info.plist */,
+				3310431A208A1D18009A3A2D /* Extensions */,
+				33104321208A1E7C009A3A2D /* CompoundableDataSource.swift */,
+				33104320208A1E7C009A3A2D /* CompoundDataSource.swift */,
+				33104324208A1EC6009A3A2D /* SingleTypeDataSource.swift */,
 			);
 			path = SweetDataSource;
 			sourceTree = "<group>";
@@ -224,6 +235,7 @@
 		3310431A208A1D18009A3A2D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				33104326208A1EFB009A3A2D /* UITableView+Generics.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +354,7 @@
 					};
 					331042F6208A1C5F009A3A2D = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					331042FE208A1C5F009A3A2D = {
 						CreatedOnToolsVersion = 9.3;
@@ -427,6 +440,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33104322208A1E7C009A3A2D /* CompoundDataSource.swift in Sources */,
+				33104327208A1EFB009A3A2D /* UITableView+Generics.swift in Sources */,
+				33104323208A1E7C009A3A2D /* CompoundableDataSource.swift in Sources */,
+				33104325208A1EC6009A3A2D /* SingleTypeDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,8 +617,10 @@
 		331042EA208A1C42009A3A2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SweetDataSourceDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -617,8 +636,10 @@
 		331042EB208A1C42009A3A2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SweetDataSourceDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -672,6 +693,7 @@
 		3310430F208A1C5F009A3A2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -689,6 +711,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.usesweet.SweetDataSource;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -699,6 +722,7 @@
 		33104310208A1C5F009A3A2D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
