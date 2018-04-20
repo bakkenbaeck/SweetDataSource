@@ -34,4 +34,10 @@ public extension UITableView {
             return type.init()
         }
     }
+
+    public func deselectSelectedRow(animated: Bool = true) {
+        guard let selectedIndexPath = self.indexPathForSelectedRow else { /* nothing to deselect */ return }
+
+        self.deselectRow(at: selectedIndexPath, animated: animated)
+    }
 }

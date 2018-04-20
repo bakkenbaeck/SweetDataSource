@@ -120,13 +120,17 @@ open class SingleTypeDataSource<CellType: UITableViewCell, ItemType: Equatable>:
     }
 
     open override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueCell(of: CellType.self)
+        let cell = tableView.dequeueCell(of: CellType.self, for: indexPath)
         let itemForRow = item(at: indexPath)
         configureCell(cell: cell, for: itemForRow)
         return cell
     }
 
     open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if parent == nil {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+        
         selectionAction(item(at: indexPath))
     }
 }

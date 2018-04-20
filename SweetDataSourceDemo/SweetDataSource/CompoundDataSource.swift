@@ -49,8 +49,7 @@ public class CompoundDataSource: NSObject, UITableViewDataSource, UITableViewDel
     }
 
     public func deselectSelectedRow(animated: Bool = true) {
-        guard let selectedIndexPath = tableView?.indexPathForSelectedRow else { return }
-        tableView?.deselectRow(at: selectedIndexPath, animated: animated)
+        tableView?.deselectSelectedRow(animated: animated)
     }
 
     // MARK: - Figuring out which data source to use
